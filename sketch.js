@@ -10,7 +10,7 @@ var Pig1,Pig2;
 var Log1,Log2,Log3,Log4;
 var bird;
 var backgroundImg ;
-
+var platform;
 function preload() {
   backgroundImg = loadImage("sprites/bg.png");
 }
@@ -23,7 +23,7 @@ function setup() {
 
   // create the ground object
   myGround = new Ground (600,height, 1200, 20);
-
+   platform = new Ground(150,305,300,170);
   // 1st layer objects
   Box1 = new Box(700,320,70,70);
   Box2 = new Box(920,320,70,70);
@@ -68,4 +68,6 @@ function draw() {
   Log4.display () ;
 
   bird.display () ;
+
+  platform.display();
 }
